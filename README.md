@@ -20,7 +20,17 @@ Following the instruction from [Rosinality](https://github.com/rosinality/styleg
 - Latent codes of faces in CelebA-HQ dataset
 - Identity disentanglement rank for single channels
 - Identity disentanglement rank for group of 256 channels
-- Pre-trained facial recognition models for both ID lost and model under attack
+
+In addition, we provide various auxiliary models needed for training the mapper as well as pretrained models needed for computing the identity disentanglement metrics reported in the paper.
+| Path | Description
+| :--- | :----------
+|[Segmentation to Image](https://drive.google.com/file/d/1VpEKc6E6yG3xhYuZ0cq8D2_1CbT0Dstz/view?usp=sharing) | [pSp](https://github.com/eladrich/pixel2style2pixel) trained with the CelebAMask-HQ dataset for image synthesis from segmentation maps.
+|[IR-SE50 Model](https://drive.google.com/file/d/1KW7bjndL3QG3sxBbZxreGHigcCCpsDgn/view?usp=sharing) | Pretrained IR-SE50 model taken from [TreB1eN](https://github.com/TreB1eN/InsightFace_Pytorch) for use in our ID loss during pSp training.
+|[MoCo ResNet-50](https://drive.google.com/file/d/18rLcNGdteX5LwT7sv_F7HWr12HpVEzVe/view?usp=sharing)  | Pretrained ResNet-50 model trained using MOCOv2 for computing MoCo-based similarity loss on non-facial domains. The model is taken from the [official implementation](https://github.com/facebookresearch/moco).
+|[CurricularFace Backbone](https://drive.google.com/file/d/1f4IwVa2-Bn9vWLwB-bUwm53U_MlvinAj/view?usp=sharing)  | Pretrained CurricularFace model taken from [HuangYG123](https://github.com/HuangYG123/CurricularFace) for use in ID similarity metric computation.
+|[MTCNN](https://drive.google.com/file/d/1tJ7ih-wbCO6zc3JhI_1ZGjmwXKKaPlja/view?usp=sharing)  | Weights for MTCNN model taken from [TreB1eN](https://github.com/TreB1eN/InsightFace_Pytorch) for use in ID similarity metric computation. (Unpack the tar.gz to extract the 3 model weights.)
+
+All of these models should be placed in ```./pretrained_models/``` folder.
 
 ## Usage
 
