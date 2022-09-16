@@ -1,4 +1,5 @@
 import gdown
+import os
 
 google_drive_paths = {
     "stylegan2": "https://drive.google.com/uc?id=1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT",
@@ -15,6 +16,13 @@ google_drive_paths = {
     "unet": "https://drive.google.com/uc?id=112SilQfnCM3_-Zugik6fu_EuXlmDP4Vi"
     
 }
+
+if not os.path.isdir("./pretrained_models/"):
+    os.makedirs("./pretrained_models/")
+if not os.path.isdir("./data/"):
+    os.makedirs("./data/")
+if not os.path.isdir("./statistics/"):
+    os.makedirs("./statistics/")
 
 # StyleGAN2 FFHQ config f model
 gdown.download(google_drive_paths['stylegan2'], 'pretrained_models/stylegan2-ffhq-config-f.pt', quiet=False)
