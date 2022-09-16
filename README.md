@@ -35,7 +35,7 @@ All of these models should be placed in ```./pretrained_models/``` folder.
 
 Given an input facial image, the identity can be anonymized by swaping to a specific target or randomly generated target. For the simplicity of demonstration, we choose both input face and target face randomly.
 
-All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github.com/minha12/StyleID/blob/main/StyleID.ipynb)).
+All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)).
 
 ## Citation:
 
