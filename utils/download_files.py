@@ -34,7 +34,7 @@ gdown.download(google_drive_paths['celeba_samples'], 'data/celeba_samples.pt', q
 gdown.download(google_drive_paths['channels_rank'], 'statistics/channels_rank.npy', quiet=False)
 
 # Group 256 channels rank
-gdown.download(google_drive_paths['channels_rank'], 'statistics/group_256_rank.npy', quiet=False)
+gdown.download(google_drive_paths['group_256_rank'], 'statistics/group_256_rank.npy', quiet=False)
 
 # mapper pretrained model
 gdown.download(google_drive_paths['mapper'], 'pretrained_models/mapper.pt', quiet=False)
