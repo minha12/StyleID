@@ -90,6 +90,17 @@ jupyter lab
 ```
 Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup" and "Downloading models and data" as they are meant for Google Colab only.
 
+## Directories' description
+| Path | Description
+| :--- | :----------
+| `configs` | General configs for datasets, paths and transforms that used by the framework.
+| `criteria` | Modules and classes for loss functions.
+| `datasets` | Modules and classes to handles datasets.
+| `mapper` | Specific options and data class for the latent mapper.
+| `models` | Models to be used by StyleIDs.
+| `pretrained_models`| Weights of pre-trained models will be placed here.
+| `utils` | Utilities that will be used by StyleID.
+
 ## Citation:
 
 If you use our code, please cite our paper:
