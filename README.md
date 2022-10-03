@@ -88,7 +88,7 @@ Open Jupyter Lab at current StyleID folder:
 ```
 jupyter lab
 ```
-Navigate and open `notebook.ipyb`. Please ignore the first section of "Setting up for Google Colab" section and run the "Demo" section directly.
+Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup" and "Downloading models and data" as they are meant for Google Colab only.
 
 ## Citation:
 
