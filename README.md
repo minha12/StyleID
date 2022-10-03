@@ -15,7 +15,51 @@ This is the official implementation of StyleID, a framework to disentangle and a
 
 The face generator is [Rosinality](https://github.com/rosinality/stylegan2-pytorch/) pytorch implementation of StyleGAN2. The model has been modified to fit with our framework.
 
-Following the instruction from [Rosinality](https://github.com/rosinality/stylegan2-pytorch/) to setup the face generator and a pre-trained model of StyleGAN2 will downloaded by our provided script ```download_files.py``` (or manually download from [link](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)). Furthermore, few others files will be downloaded including:
+## Shortcut
+
+Without any hassle of setting up environment, a demo of our work can be run on google Colab on this link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)
+## Prerequisites
+
+This framework has been successfully tested on:
+
+- Ubuntu 18.04
+- Pytorch 1.7.1
+- Cuda Toolkit 11.2.2
+
+Hardwares:
+
+- CPU: Intel core i7 10th generation
+- GPU: Nvidia RTX 3090 (this is not a requirements, any GPU with at least 12GB of VRAM should be enough)
+- RAM: 32 GB DDR4
+
+## Installation
+
+We recommend to set-up the virual environment by Anaconda:
+
+```
+conda env update -n styleid --file ./requirements.yaml
+pip install --upgrade --no-cache-dir gdown
+wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-linux.zip
+sudo unzip ninja-linux.zip -d /usr/local/bin/
+sudo update-alternatives --install /usr/bin/ninja ninja /usr/local/bin/ninja 1 --force
+```
+
+### Special requirements for Nvidia RTX 30 series
+
+- Install Cuda Toolkit 11.2.2
+- Pytorch 1.7.1:
+```
+pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+```
+### Dowload required pre-trained models and statistics
+
+Pre-trained models will be downloaded by our provided script ```download_files.py``` (or manually download from [link](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)). 
+
+```
+python utils/download_files.py
+```
+
+Note that few others files will be downloaded (while the script is running) including:
 
 - Latent codes of faces in CelebA-HQ dataset
 - Identity disentanglement rank for single channels
@@ -33,9 +77,18 @@ All of these models should be placed in ```./pretrained_models/``` folder.
 
 ## Usage
 
-Given an input facial image, the identity can be anonymized by swaping to a specific target or randomly generated target. For the simplicity of demonstration, we choose both input face and target face randomly.
+Given an input facial image, the identity can be anonymized by swaping to a specific target or randomly generated target. For the simplicity of demonstration, we choose both input face and target face randomly. 
 
-All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)).
+### Google Colab
+We highly recommend to run our demo on Google Colab to avoid any issue related to setting up environment. All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)).
+
+### Run locally
+Open Jupyter Lab at current StyleID folder:
+
+```
+jupyter lab
+```
+Navigate and open `notebook.ipyb`. Please ignore the first section of "Setting up for Google Colab" section and run the "Demo" section directly.
 
 ## Citation:
 
