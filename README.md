@@ -26,7 +26,7 @@ This framework has been successfully tested on:
 - Pytorch 1.7.1
 - Cuda Toolkit 11.2.2
 
-Hardwares:
+Hardware:
 
 - CPU: Intel core i7 10th generation
 - GPU: Nvidia RTX 3090 (this is not a requirements, any GPU with at least 12GB of VRAM should be enough)
@@ -34,7 +34,7 @@ Hardwares:
 
 ## Installation
 
-We recommend to set-up the virual environment by Anaconda:
+We recommend to set up the virtual environment by Anaconda:
 
 ```
 conda env update -n styleid --file ./requirements.yaml
@@ -51,7 +51,7 @@ sudo update-alternatives --install /usr/bin/ninja ninja /usr/local/bin/ninja 1 -
 ```
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-### Dowload required pre-trained models and statistics
+### Download required pre-trained models and statistics
 
 Pre-trained models will be downloaded by our provided script ```download_files.py``` (or manually download from [link](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)). 
 
@@ -59,7 +59,7 @@ Pre-trained models will be downloaded by our provided script ```download_files.p
 python utils/download_files.py
 ```
 
-Note that few others files will be downloaded (while the script is running) including:
+Note that a few others files will be downloaded (while the script is running) including:
 
 - Latent codes of faces in CelebA-HQ dataset
 - Identity disentanglement rank for single channels
@@ -77,10 +77,10 @@ All of these models should be placed in ```./pretrained_models/``` folder.
 
 ## Usage
 
-Given an input facial image, the identity can be anonymized by swaping to a specific target or randomly generated target. For the simplicity of demonstration, we choose both input face and target face randomly. 
+Given an input facial image, the identity can be anonymized by swaping to a specific target or randomly generated target. For simplicity of demonstration, we choose both input face and target face randomly. 
 
 ### Google Colab
-We highly recommend to run our demo on Google Colab to avoid any issue related to setting up environment. All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)).
+We highly recommend running our demo on Google Colab to avoid any issue related to setting up environment. All the three methods are demonstrated in `notebook.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minha12/StyleID/blob/main/StyleID.ipynb)).
 
 ### Run locally
 Open Jupyter Lab at current StyleID folder:
@@ -93,7 +93,7 @@ Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup"
 ## Directories' description
 | Directory | Description
 | :--- | :----------
-| `configs` | General configs for datasets, paths and transforms that used by the framework.
+| `configs` | General configs for datasets, paths, and transforms that used by the framework.
 | `criteria` | Modules and classes for loss functions.
 | `datasets` | Modules and classes to handle datasets.
 | `mapper` | Specific options and data classes for the latent mapper.
@@ -105,4 +105,4 @@ Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup"
 
 If you use our code, please cite our paper:
 
-Minh-Ha Le, Niklas Carlsson, “StyleID: Identity Disentanglement for Anonymizing Faces”, Proceedings on Privacy Enhancing Technologies (PoPETs), Volumn 2023.1, June 15, 2023.
+Minh-Ha Le, Niklas Carlsson, “StyleID: Identity Disentanglement for Anonymizing Faces”, Proceedings on Privacy Enhancing Technologies (PoPETs), Volume 2023.1, June 15, 2023.
