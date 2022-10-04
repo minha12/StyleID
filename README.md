@@ -53,7 +53,7 @@ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f ht
 ```
 ### Download required pre-trained models and statistics
 
-Pre-trained models will be downloaded by our provided script ```download_files.py``` (or manually download from [link](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)). 
+Pre-trained models will be downloaded by our provided script ```utils/download_files.py``` (or manually download from [link](https://drive.google.com/file/d/1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT/view?usp=sharing)). 
 
 ```
 python utils/download_files.py
