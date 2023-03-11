@@ -105,10 +105,14 @@ Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup"
 ## Citation:
 
 If you use our code, please cite our paper:
+
 <a href="https://arxiv.org/abs/2212.13791"><img src="https://img.shields.io/badge/arXiv-2111.15666-b31b1b.svg" height=22.5></a>
+
+```
 @inproceedings{le2023styleid,
   title={StyleID: Identity Disentanglement for Anonymizing Faces},
   author={Le, Minh Ha and Carlsson, Niklas},
   booktitle={Proceedings on Privacy Enhancing Technologies (PoPETs)},
   year={2023}
 }
+```
