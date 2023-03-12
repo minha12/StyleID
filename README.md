@@ -1,5 +1,5 @@
 # StyleID - Official Pytorch implementation
-<a href="https://arxiv.org/abs/2212.13791"><img src="https://img.shields.io/badge/arXiv-2111.15666-b31b1b.svg" height=22.5></a>
+<a href="https://arxiv.org/abs/2212.13791"><img src="https://img.shields.io/badge/arXiv-2212.13791-b31b1b.svg" height=22.5></a>
 
 **StyleID: Identity Disentanglement for Anonymizing Faces**<br>
 > Minh-Ha Le and Niklas Carlsson <br>
@@ -106,7 +106,7 @@ Navigate and open `notebook.ipyb`. Please ignore the sections of "Initial setup"
 
 If you use our code, please cite our paper:
 
-<a href="https://arxiv.org/abs/2212.13791"><img src="https://img.shields.io/badge/arXiv-2111.15666-b31b1b.svg" height=22.5></a>
+<a href="https://arxiv.org/abs/2212.13791"><img src="https://img.shields.io/badge/arXiv-2212.13791-b31b1b.svg" height=22.5></a>
 
 ```
 @inproceedings{le2023styleid,
